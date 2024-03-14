@@ -23,13 +23,13 @@ public class friendsproject {
     public static void friends() {
         String temp = "";
         do {
-            temp = uI.nextLine();
+            temp = uI.nextLine(); // ui input
             if (temp.equals("d"))
-                break;
+                break;// checks to see if they user wants to quit entering friends
             friends.add(temp);
         } while (true);
         System.out.println("Here is your list of friends!");
-        for (int i = 1; i < friends.size(); i++) {
+        for (int i = 1; i < friends.size(); i++) {// prting list of friends
             System.out.println(i + ". " + friends.get(i));
         }
     }
@@ -38,12 +38,13 @@ public class friendsproject {
         System.out.println("Here are the friends your going to the movies with!: ");
         Random r = new Random(friends.size());
         String str = friends.get(r.nextInt(friends.size()));
-        System.out.println(str);
+        System.out.println(str);// prints first random friend
         String str2 = friends.get(r.nextInt(friends.size()));
         while (true) {
             if (str2.equals(str)) {
                 str2 = friends.get(r.nextInt(friends.size()));
-            } else {
+            } else {// checks to see if net generated string is a duplicate of the first if not it
+                    // breaks the while loop
                 break;
             }
         }
@@ -55,12 +56,13 @@ public class friendsproject {
         System.out.println("(indicate with the number next to their names. Press \"0)\" to end.");
         int tempInt;
         do {
-            tempInt = uI.nextInt();
+            tempInt = uI.nextInt();// user input
             if (tempInt == 0)
                 break;
             String str = friends.get(tempInt);
             bestfriends.add(str);
-            friends.remove(tempInt);
+            friends.remove(tempInt);// adds the selected friends to best friends and deletes them off the friends
+                                    // list
         } while (true);
         System.out.println("Here is your list of friends!");
         for (int i = 1; i < friends.size(); i++) {
@@ -70,5 +72,6 @@ public class friendsproject {
         for (int i = 1; i < bestfriends.size(); i++) {
             System.out.println(i + ". " + bestfriends.get(i));
         }
+        // printing out the friends and best friends list
     }
 }
