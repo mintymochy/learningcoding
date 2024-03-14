@@ -7,7 +7,7 @@ import java.util.*;
  augustjones
  :3
  */
-public class project {
+public class friendsproject {
     static ArrayList<String> friends = new ArrayList<>();
     static Scanner uI = new Scanner(System.in);
     static ArrayList<String> bestfriends = new ArrayList<>();
