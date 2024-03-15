@@ -15,23 +15,18 @@ public class friendsproject {
 
     public static void main(String[] args) {
         System.out.println("Hello! PLease enter your friends first names! \nPress \"d\" when you are done!");
-        friends();
-        movies();
-        bestFriends();
-    }
-
-    public static void friends() {
         String temp = "";
         do {
-            temp = uI.nextLine(); // ui input
+            temp = uI.next(); // ui input
             if (temp.equals("d"))
                 break;// checks to see if they user wants to quit entering friends
             friends.add(temp);
         } while (true);
         System.out.println("Here is your list of friends!");
-        for (int i = 1; i < friends.size(); i++) {// prting list of friends
+        for (int i = 0; i < friends.size(); i++) {// prting list of friends
             System.out.println(i + ". " + friends.get(i));
         }
+        movies();
     }
 
     public static void movies() {
