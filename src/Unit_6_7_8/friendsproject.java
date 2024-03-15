@@ -24,9 +24,10 @@ public class friendsproject {
         } while (true);
         System.out.println("Here is your list of friends!");
         for (int i = 0; i < friends.size(); i++) {// prting list of friends
-            System.out.println(i + ". " + friends.get(i));
+            System.out.println((i + 1) + ". " + friends.get(i));
         }
         movies();
+        bestFriends();
     }
 
     public static void movies() {
@@ -54,18 +55,18 @@ public class friendsproject {
             tempInt = uI.nextInt();// user input
             if (tempInt == 0)
                 break;
-            String str = friends.get(tempInt);
-            bestfriends.add(str);
+            tempInt--;
+            bestfriends.add(friends.get(tempInt + 1));
             friends.remove(tempInt);// adds the selected friends to best friends and deletes them off the friends
                                     // list
         } while (true);
         System.out.println("Here is your list of friends!");
-        for (int i = 1; i < friends.size(); i++) {
-            System.out.println(i + ". " + friends.get(i));
+        for (int i = 0; i < friends.size(); i++) {
+            System.out.println((i + 1) + ". " + friends.get(i));
         }
         System.out.println("Here is your list of Best friends!");
-        for (int i = 1; i < bestfriends.size(); i++) {
-            System.out.println(i + ". " + bestfriends.get(i));
+        for (int i = 0; i < bestfriends.size(); i++) {
+            System.out.println((i + 1) + ". " + bestfriends.get(i));
         }
         // printing out the friends and best friends list
     }
