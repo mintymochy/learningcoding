@@ -56,7 +56,7 @@ public class friendsproject {
             if (tempInt == 0)
                 break;
             tempInt--;
-            bestfriends.add(friends.get(tempInt + 1));
+            bestfriends.add(friends.get(tempInt));
             friends.remove(tempInt);// adds the selected friends to best friends and deletes them off the friends
                                     // list
         } while (true);
