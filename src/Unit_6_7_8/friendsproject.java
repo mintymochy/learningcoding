@@ -56,9 +56,16 @@ public class friendsproject {
             if (tempInt == 0)
                 break;
             tempInt--;
-            bestfriends.add(friends.get(tempInt));
-            friends.remove(tempInt);// adds the selected friends to best friends and deletes them off the friends
-                                    // list
+            bestfriends.add(friends.get(tempInt));// adds the selected friends to best friends and deletes them off the
+                                                  // friends list
+            String temp2 = bestfriends.get(bestfriends.size() - 1);
+            for (String temp : friends) {
+                if (temp.equals(temp2)) {
+                    int tempNum = friends.indexOf(temp2);
+                    friends.remove(tempNum);
+                    break;
+                }
+            }
         } while (true);
         System.out.println("Here is your list of friends!");
         for (int i = 0; i < friends.size(); i++) {
