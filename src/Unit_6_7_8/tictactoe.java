@@ -26,4 +26,8 @@ public class tictactoe {
             }
         }
     }
+
+    public static void playX() {
+
+    }
 }
