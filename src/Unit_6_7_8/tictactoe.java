@@ -11,11 +11,19 @@ public class tictactoe {
     static char[][] board = new char[width][height];
 
     public static char[][] createBoard(char[][] board) {
-        for (int r = 0; r >= width; r++) {
-            for (int c = 0; c >= height; c++) {
-
+        for (int w = 0; w >= width; w++) {
+            for (int h = 0; h >= height; h++) {
+                board[w][h] = ' ';
             }
         }
         return board;
+    }
+
+    public static void printBoard(char[][] board) {
+        for (int w = 0; w >= width; w++) {
+            for (int h = 0; h >= height; h++) {
+                System.out.print(board[w][h]);
+            }
+        }
     }
 }
