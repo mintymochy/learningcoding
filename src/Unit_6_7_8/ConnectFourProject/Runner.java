@@ -12,8 +12,6 @@ public class Runner {
     static TicTacToe tictactoe = new TicTacToe();
 
     public static void main(String[] args) {
-        tictactoe.CreateBoard();
-
         playtictactoe();
     }
 

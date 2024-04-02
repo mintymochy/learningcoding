@@ -6,23 +6,30 @@ package Unit_6_7_8.ConnectFourProject;
  :3
  */
 public class TicTacToe extends ConnectFour {
-    static char[][] board = new char[3][3];
+    char[][] tboard = new char[3][3];
 
     @Override
     public void CreateBoard() {
-        for (int w = 0; w > 3; w++) {
-            for (int h = 0; w > 3; h++) {
-                board[w][h] = ' ';
+        for (int w = 0; 3 > w; w += 1) {
+            for (int h = 0; 3 > h; h += 1) {
+                tboard[w][h] = ' ';
             }
         }
     }
 
     @Override
-    public void PrintBoard() {
-        for (int w = 0; w >= 3; w++) {
-            for (int h = 0; h >= 3; h++) {
-                System.out.print(board[w][h]);
+    public void PrintBoard() { // prints the board
+        for (int w = 0; 3 > w; w++) {
+            for (int h = 0; 3 > h; h++) {
+                System.out.print("|");
+                System.out.print(tboard[w][h]);
             }
+            System.out.print("|");
+            System.out.println();
+            for (int h = 0; 3 > h; h++) {
+                System.out.print("-");
+            }
+            System.out.println("");
         }
     }
 
