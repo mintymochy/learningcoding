@@ -9,25 +9,33 @@ import java.util.*;
  :3
 */
 public class ConnectFour {
-    final static int width = 6;
-    final static int height = 6;
-    final static int bottom_row = width - 1;
-    static char[][] board = new char[width][height];
+    private int width = 6;
+    private int height = 6;
+    int bottom_row = width - 1;
+    char[][] board = new char[width][height];
     static Scanner uI = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        CreateBoard();
-        PrintBoard();
-        do {
-            DropX();
-            PrintBoard();
-            checkWin();
-            DropO();
-            PrintBoard();
-        } while (!checkWin()); // keeps running the game until check win returns true
+    public ConnectFour() {
+
     }
 
-    public static void CreateBoard() { // creates the board
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getWidth() {
+        return height;
+    }
+
+    public void CreateBoard() { // creates the board
         for (int w = 0; width > w; w += 1) {
             for (int h = 0; height > h; h += 1) {
                 board[w][h] = ' ';
@@ -35,7 +43,7 @@ public class ConnectFour {
         }
     }
 
-    public static void PrintBoard() { // prints the board
+    public void PrintBoard() { // prints the board
         for (int w = 0; width > w; w++) {
             for (int h = 0; height > h; h++) {
                 System.out.print("|");
@@ -47,7 +55,7 @@ public class ConnectFour {
         System.out.println("̅‾‾‾‾‾‾‾‾‾‾‾‾̅");
     }
 
-    public static void DropX() {
+    public void DropX() {
         int counter = 1;
         System.out.print("Player 1's Turn!\nWhere do you want to drop? (enter 0-5): ");
         int column = uI.nextInt();
@@ -71,7 +79,7 @@ public class ConnectFour {
         }
     }
 
-    public static void DropO() {
+    public void DropO() {
         int counter = 1;
         System.out.print("Player 2's Turn!\nWhere do you want to drop? (enter 0-5): ");
         int column = uI.nextInt();
@@ -95,7 +103,7 @@ public class ConnectFour {
         }
     }
 
-    public static boolean checkWin() { // asking the players if anyone has gotten four in a row yet for a win condition
+    public boolean checkWin() { // asking the players if anyone has gotten four in a row yet for a win condition
         boolean winCondition;
         System.out.println("Has anyone won? (y/n):");
         String outcome = uI.next().toLowerCase();
