@@ -30,5 +30,8 @@ public class Runner {
     public static void playtictactoe() {
         tictactoe.CreateBoard();
         tictactoe.PrintBoard();
+        // do
+        // {tictactoe.DropX();tictactoe.PrintBoard();tictactoe.checkWin();tictactoe.DropO();tictactoe.PrintBoard();}
+        // while (!tictactoe.checkWin());
     }
 }
