@@ -17,7 +17,7 @@ public class TicTacToe extends ConnectFour {
             for (int h = 0; h < 3; h += 1) {
                 b[w][h] = ' ';
             }
-        }   
+        }
     }
 
     @Override
