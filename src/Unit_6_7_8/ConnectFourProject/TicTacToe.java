@@ -34,7 +34,17 @@ public class TicTacToe extends ConnectFour {
 
     @Override
     public void DropX() {
-        System.out.println("Where do you want to place your x?: ");
+        System.out.println("Where do you want to place your x? enter the letter then the number.");
+        int row = scanner.nextInt() - 1;
+        int col;
+        String coltemp = scanner.next().toUpperCase();
+        if (coltemp.equals("A")) {
+            col = 0;
+        } else if (coltemp.equals("B")) {
+            col = 1;
+        } else if (coltemp.equals("C")) {
+            col = 2;
+        }
 
     }
 
