@@ -12,9 +12,23 @@ public class UnitCircle {
 	private double pi = Math.PI;
 
 	public UnitCircle() {
+
 	}
 
 	public double getPi() {
 		return pi;
+	}
+
+	public double cos(int x) {
+		return Math.cos(x);
+	}
+
+	public double sin(int x) {
+		return Math.sin(x);
+	}
+
+	public void getInput() {
+		int input = uI.nextInt();
+
 	}
 }
