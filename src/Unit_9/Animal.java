@@ -52,7 +52,7 @@ public class Animal {
 
 		public void grow() {
 			int x = getWeight();
-			setTrunkLength(x % 4);
+			setTrunkLength(trunkLength + (x % 4));
 		}
 
 		public String toString() {
@@ -61,7 +61,7 @@ public class Animal {
 	}
 
 	public static void main(String[] args) {
-		Animal a = new Animal(null, 0);
+		Animal a = new Animal(null, 200);
 		ArrayList<Elephant> enclosure = new ArrayList<Elephant>();
 		enclosure.add(a.new Elephant(80));
 		enclosure.add(a.new Elephant(75));
