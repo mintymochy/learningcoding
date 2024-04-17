@@ -11,8 +11,7 @@ public class UnitCircle {
 	Scanner uI = new Scanner(System.in);
 	private double pi = Math.PI;
 
-	public UnitCircle(double pi) {
-		this.pi = pi;
+	public UnitCircle() {
 	}
 
 	public double getPi() {
