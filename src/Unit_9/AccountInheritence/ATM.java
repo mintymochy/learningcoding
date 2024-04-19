@@ -9,11 +9,12 @@ import java.util.*;
  */
 public class ATM {
 	static Scanner u = new Scanner(System.in);
-	static Checking ch;
-	static Credit c;
-	static Savings s;
+	static Checking ch = new Checking();
+	static Credit c = new Credit();
+	static Savings s = new Savings();
 
 	public static void main(String[] args) {
+		System.out.println();
 		System.out.println(
 				"Welcome! Today you will be setting up a credit card account, checking account, and a savings account.");
 		System.out.print("Enter your name!: ");
@@ -38,6 +39,7 @@ public class ATM {
 		s.setBalance(sbal);
 		s.setInterest(i);
 		s.setName(name);
+		mainMenu();
 	}
 
 	public static void mainMenu() {
@@ -48,24 +50,38 @@ public class ATM {
 				+ "\n3. Savings"
 				+ "\n4. Quit");
 		int user = u.nextInt();
-		if (user == 1) {
-			Credit();
-		} else if (user == 2) {
-			Checking();
-		} else if (user == 3) {
-			Savings();
-		} else if (user == 4) {
+		boolean b;
+		if (user == 4) {
+			b = false;
 			System.out.println("Thank you for visiting the bank!\nHave a good day!");
+		} else {
+			b = true;
 		}
-
+		if (b == true) {
+			while (true) {
+				if (user == 1) {
+					Credit();
+					break;
+				} else if (user == 2) {
+					Checking();
+					break;
+				} else if (user == 3) {
+					Savings();
+					break;
+				} else {
+					System.out.println("Error Enter a value 1-5.");
+				}
+			}
+		}
 	}
 
 	public static void Credit() {
+		System.out.println("\nCredit Options");
 		System.out.println("1. Check Balance"
-				+ "2. Make Purchase"
-				+ "3. Display Monthly Statement"
-				+ "4. Create Monthly Payments"
-				+ "5. Back to Main Menu");
+				+ "\n2. Make Purchase"
+				+ "\n3. Display Monthly Statement"
+				+ "\n4. Create Monthly Payments"
+				+ "\n5. Back to Main Menu");
 		int user = u.nextInt();
 		boolean b;
 		if (user == 5) {
@@ -95,10 +111,11 @@ public class ATM {
 	}
 
 	public static void Checking() {
+		System.out.println("\nChecking Options");
 		System.out.println("1. Check Balance"
-				+ "2. Withdraw"
-				+ "3. Deposit"
-				+ "4. Back to Main Menu");
+				+ "\n2. Withdraw"
+				+ "\n3. Deposit"
+				+ "\n4. Back to Main Menu");
 		int user = u.nextInt();
 		boolean b;
 		if (user == 4) {
@@ -125,11 +142,12 @@ public class ATM {
 	}
 
 	public static void Savings() {
+		System.out.println("\nSavings Options");
 		System.out.println("1. Check Balance"
-				+ "2. Withdrawl"
-				+ "3. Deposit"
-				+ "4. Display Months till goal"
-				+ "5. Back to Main Menu");
+				+ "\n2. Withdrawl"
+				+ "\n3. Deposit"
+				+ "\n4. Display Months till goal"
+				+ "\n5. Back to Main Menu");
 		int user = u.nextInt();
 		boolean b;
 		if (user == 5) {

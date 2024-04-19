@@ -34,6 +34,7 @@ public class Bank extends Account {
 		double x = uI.nextDouble();
 		double bal = getBalance();
 		setBalance(x + bal);
+		System.out.println("Transaction Completed.");
 	}
 
 	public void withdrawl() {
@@ -41,6 +42,7 @@ public class Bank extends Account {
 		double x = uI.nextDouble();
 		double bal = getBalance();
 		setBalance(x - bal);
+		System.out.println("Transaction Completed.");
 	}
 
 	public String toString() {
