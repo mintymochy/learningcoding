@@ -16,8 +16,8 @@ public class Bank extends Account {
 		name = "unknown";
 	}
 
-	public Bank(String n) {
-		super();
+	public Bank(double b, String n) {
+		super(b);
 		name = n;
 	}
 

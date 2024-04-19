@@ -15,26 +15,45 @@ public class ATM {
 				"Welcome! Today you will be setting up a credit card account, checking account, and a savings account.");
 		System.out.print("Enter your name!: ");
 		String name = u.next();
-		System.out.print("Enter your account balance: ");
+		System.out.print("Enter your checking account balance: ");
 		double tbal = u.nextDouble();
-		Account a = new Account(tbal);
-		Bank b = new Bank(name);
 		System.out.print("Enter your APR as a decimal(0.XX): ");
 		double apr = u.nextDouble();
 		System.out.print("Enter your credit card balance: ");
 		double cbal = u.nextDouble();
-		Credit c = new Credit(apr, cbal);
 		System.out.print("What is your overdraft fee?: ");
-		double over = u.nextDouble();
-		Checking ch = new Checking(over);
+		double f = u.nextDouble();
 		System.out.print("Enter your savings account balance: ");
 		double sbal = u.nextDouble();
 		System.out.print("What is your interest rate?: ");
 		double i = u.nextDouble();
-		Savings s = new Savings(i, sbal);
+		Checking ch = new Checking(tbal, name, f);
+		Credit c = new Credit(cbal, apr);
+		Savings s = new Savings(sbal, name, i);
 	}
 
 	public static void mainMenu() {
-		System.out.println("1. ");
+		System.out.println("Welcome to the bank!");
+		System.out.println("1. Credit Card");
+		System.out.println("2. Checking");
+		System.out.println("3. Savings");
+		System.out.println("4. Quit");
+		int user = u.nextInt();
+		if (user == 4) {
+			System.out.println("Thank you for visiting the bank!\nHave a good day!");
+		}
+
+	}
+
+	public static void Credit() {
+
+	}
+
+	public static void Checking() {
+
+	}
+
+	public static void Savings() {
+
 	}
 }

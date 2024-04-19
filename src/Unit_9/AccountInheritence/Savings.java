@@ -9,18 +9,15 @@ import java.util.*;
  */
 public class Savings extends Bank {
 	private double interest;
-	private double bal;
 
 	public Savings() {
 		super();
 		interest = 0;
-		bal = 0;
 	}
 
-	public Savings(double i, double b) {
-		super();
+	public Savings(double b, String n, double i) {
+		super(b, n);
 		interest = i;
-		bal = b;
 	}
 
 	public double getInterest() {
@@ -31,27 +28,19 @@ public class Savings extends Bank {
 		this.interest = interest;
 	}
 
-	public void setBal(double b) {
-		this.bal = bal;
-	}
-
-	public double getBal() {
-		return bal;
-	}
-
 	public int amountInAccount(double st) {
 		return (int) Math.ceil((Math.log(st / getBalance())) / (12 * (Math.log(1 + (getInterest() / 12)))));
 	}
 
 	public void withdrawl(int w) {
-		if (getBal() - w < 0) {
+		if (getBalance() - w < 0) {
 			System.out.println("Withdrawl amount too high balance would be negative.");
 		}
-		setBal(getBalance() - w);
+		setBalance(getBalance() - w);
 	}
 
 	public String toString() {
-		return super.toString() + "\nInterest: " + interest + "\n Savings balance: " + bal;
+		return super.toString() + "\nInterest: " + interest + "\n Savings balance: " + getBalance();
 	}
 
 }
