@@ -32,6 +32,9 @@ public class ATM {
 		System.out.print("What is your interest rate?: ");
 		double i = u.nextDouble();
 		Savings s = new Savings(i, sbal);
+	}
 
+	public static void mainMenu() {
+		System.out.println("1. ");
 	}
 }
