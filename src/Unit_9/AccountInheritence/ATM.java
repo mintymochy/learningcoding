@@ -39,7 +39,13 @@ public class ATM {
 		System.out.println("3. Savings");
 		System.out.println("4. Quit");
 		int user = u.nextInt();
-		if (user == 4) {
+		if (user == 1) {
+			Credit();
+		} else if (user == 2) {
+			Checking();
+		} else if (user == 3) {
+			Savings();
+		} else if (user == 4) {
 			System.out.println("Thank you for visiting the bank!\nHave a good day!");
 		}
 
