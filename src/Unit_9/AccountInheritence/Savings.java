@@ -1,7 +1,5 @@
 package Unit_9.AccountInheritence;
 
-import java.util.*;
-
 /*
  04-18-2024
  augustjones
@@ -24,7 +22,7 @@ public class Savings extends Bank {
 		return interest;
 	}
 
-	public void setInterest(double i) {
+	public void setInterest(double interest) {
 		this.interest = interest;
 	}
 

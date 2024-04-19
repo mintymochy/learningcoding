@@ -2,8 +2,6 @@ package Unit_9.AccountInheritence;
 
 import java.util.*;
 
-import Unit_1_2_3.scanner;
-
 /*
  04-18-2024
  augustjones
@@ -16,7 +14,6 @@ public class Credit extends Account {
 	public Credit() {
 		super();
 		apr = 0;
-		;
 	}
 
 	public Credit(double b, double apr) {
