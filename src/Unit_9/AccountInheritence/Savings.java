@@ -15,9 +15,9 @@ public class Savings extends Bank {
 		interest = 0;
 	}
 
-	public Savings(double b, String n, double i) {
+	public Savings(double b, String n, double interest) {
 		super(b, n);
-		interest = i;
+		this.interest = interest;
 	}
 
 	public double getInterest() {
@@ -28,11 +28,12 @@ public class Savings extends Bank {
 		this.interest = interest;
 	}
 
-	public int amountInAccount(double st) {
+	public int monthsTillGoal(double st) {
 		return (int) Math.ceil((Math.log(st / getBalance())) / (12 * (Math.log(1 + (getInterest() / 12)))));
 	}
 
 	public void withdrawl(int w) {
+		super.withdrawl();
 		if (getBalance() - w < 0) {
 			System.out.println("Withdrawl amount too high balance would be negative.");
 		}

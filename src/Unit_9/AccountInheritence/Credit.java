@@ -2,6 +2,8 @@ package Unit_9.AccountInheritence;
 
 import java.util.*;
 
+import Unit_1_2_3.scanner;
+
 /*
  04-18-2024
  augustjones
@@ -9,10 +11,12 @@ import java.util.*;
  */
 public class Credit extends Account {
 	private double apr;
+	Scanner u = new Scanner(System.in);
 
 	public Credit() {
 		super();
-		this.apr = apr;
+		apr = 0;
+		;
 	}
 
 	public Credit(double b, double apr) {
@@ -20,8 +24,19 @@ public class Credit extends Account {
 		this.apr = apr;
 	}
 
-	public void makePurchase(double c) {
+	public void setapr(double apr) {
+		this.apr = apr;
+	}
+
+	public double getapr() {
+		return apr;
+	}
+
+	public void makePurchase() {
+		System.out.println("How much is your purchase?: ");
+		double c = u.nextDouble();
 		setBalance(getBalance() + c);
+		System.out.println("Transaction Completed.");
 	}
 
 	public void monthlyStatement() {
@@ -34,5 +49,9 @@ public class Credit extends Account {
 	public double monthsToPayOff(double m) {
 		double r = apr / 12;
 		return Math.ceil(getBalance() * ((r * (Math.pow((1 + r), m))) / ((Math.pow((1 + r), m) - 1))));
+	}
+
+	public String toString() {
+		return super.toString() + "\nAPR: " + apr;
 	}
 }

@@ -14,7 +14,7 @@ public class Account {
 	public Account(double b) {
 		Random r = new Random();
 		accountId = r.nextInt(99999) + 1;
-		balance = b;
+		this.balance = balance;
 	}
 
 	public Account() {
@@ -36,7 +36,7 @@ public class Account {
 	}
 
 	public String toString() {
-		return "\nAccount ID: " + accountId + "\nBalance: $" + balance;
+		return "Account ID: " + accountId + "\nBalance: $" + balance;
 	}
 
 }

@@ -16,12 +16,12 @@ public class Bank extends Account {
 		name = "unknown";
 	}
 
-	public Bank(double b, String n) {
+	public Bank(double b, String name) {
 		super(b);
-		name = n;
+		this.name = name;
 	}
 
-	public void setName(String n) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -44,6 +44,6 @@ public class Bank extends Account {
 	}
 
 	public String toString() {
-		return super.toString() + "\nName: " + name + "\n";
+		return "\nName: " + name + super.toString();
 	}
 }

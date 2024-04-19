@@ -15,9 +15,9 @@ public class Checking extends Bank {
 		fee = 0;
 	}
 
-	public Checking(double b, String n, double f) {
+	public Checking(double b, String n, double fee) {
 		super(b, n);
-		fee = f;
+		this.fee = fee;
 	}
 
 	public double getFee() {
@@ -33,5 +33,9 @@ public class Checking extends Bank {
 		if (getBalance() > 0) {
 			setBalance(getBalance() - fee);
 		}
+	}
+
+	public String toString() {
+		return super.toString() + "\nFee: " + fee;
 	}
 }
