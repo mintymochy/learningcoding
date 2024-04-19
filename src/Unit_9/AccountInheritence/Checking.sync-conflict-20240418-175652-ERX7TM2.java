@@ -12,11 +12,7 @@ public class Checking extends Bank {
 
 	public Checking() {
 		super();
-		fee = 0;
-	}
-
-	public Checking(double f) {
-		fee = f;
+		fee = 10.0;
 	}
 
 	public double getFee() {

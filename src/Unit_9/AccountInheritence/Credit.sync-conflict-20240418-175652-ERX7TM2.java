@@ -9,22 +9,15 @@ import java.util.*;
  */
 public class Credit extends Account {
 	private double apr;
-	private double cbal;
 
-	public Credit(double apr, double cbal) {
+	public Credit(double apr) {
 		super();
 		this.apr = apr;
-		this.cbal = cbal;
 	}
 
-	public Credit(double b, double apr, double cbal) {
+	public Credit(double b, double apr) {
 		super(b);
 		this.apr = apr;
-		this.cbal = cbal;
-	}
-
-	public void setCBal() {
-		this.cbal = cbal;
 	}
 
 	public void makePurchase(double c) {
