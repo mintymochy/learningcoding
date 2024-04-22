@@ -31,11 +31,12 @@ public class Savings extends Bank {
 	}
 
 	public void withdrawl(int w) {
-		super.withdrawl();
+		super.withdraw();
 		if (getBalance() - w < 0) {
 			System.out.println("Withdrawl amount too high balance would be negative.");
 		}
 		setBalance(getBalance() - w);
+		System.out.println("Trancaction completed.");
 	}
 
 	public String toString() {

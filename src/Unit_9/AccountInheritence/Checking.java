@@ -27,9 +27,10 @@ public class Checking extends Bank {
 	}
 
 	public void withdrawl() {
-		super.withdrawl();
+		super.withdraw();
 		if (getBalance() > 0) {
 			setBalance(getBalance() - fee);
+			System.out.println("Fee of $" + getFee() + " was subtracted as you withdrew too much money.");
 		}
 	}
 

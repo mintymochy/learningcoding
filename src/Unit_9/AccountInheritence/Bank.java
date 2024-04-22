@@ -32,13 +32,12 @@ public class Bank extends Account {
 	public void deposit() {
 		System.out.println("How much do you want to deposit?: ");
 		double x = uI.nextDouble();
-		double bal = getBalance();
-		setBalance(x + bal);
+		setBalance(x + getBalance());
 		System.out.println("Transaction Completed.");
 	}
 
-	public void withdrawl() {
-		System.out.println("How much do you want to withdrawl?: ");
+	public void withdraw() {
+		System.out.println("How much do you want to withdraw?: ");
 		double x = uI.nextDouble();
 		double bal = getBalance();
 		setBalance(x - bal);

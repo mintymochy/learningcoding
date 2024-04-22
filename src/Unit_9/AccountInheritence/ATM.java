@@ -44,11 +44,13 @@ public class ATM {
 
 	public static void mainMenu() {
 		System.out.println();
-		System.out.println("Welcome to the bank!"
+		System.out.println();
+		System.out.print("Welcome to the bank!"
 				+ "\n1. Credit Card"
 				+ "\n2. Checking"
 				+ "\n3. Savings"
-				+ "\n4. Quit");
+				+ "\n4. Quit"
+				+ "\nWhat do you want to do?: ");
 		int user = u.nextInt();
 		boolean b;
 		if (user == 4) {
@@ -77,11 +79,12 @@ public class ATM {
 
 	public static void Credit() {
 		System.out.println("\nCredit Options");
-		System.out.println("1. Check Balance"
+		System.out.print("1. Check Balance"
 				+ "\n2. Make Purchase"
 				+ "\n3. Display Monthly Statement"
 				+ "\n4. Create Monthly Payments"
-				+ "\n5. Back to Main Menu");
+				+ "\n5. Back to Main Menu"
+				+ "\nWhat do you want to do?: ");
 		int user = u.nextInt();
 		boolean b;
 		if (user == 5) {
@@ -92,30 +95,39 @@ public class ATM {
 		if (b == true) {
 			while (true) {
 				if (user == 1) {
-					c.toString();
+					System.out.println(c.toString());
+					break;
 				} else if (user == 2) {
 					c.makePurchase();
+					break;
 				} else if (user == 3) {
 					c.monthlyStatement();
+					break;
 				} else if (user == 4) {
-					System.out.println("How many months would you like to pay off your balance by?: ");
-					c.monthsToPayOff(u.nextInt());
+					System.out.print("How many months would you like to pay off your balance by?: ");
+					int temp = u.nextInt();
+					System.out.println("you'll pay off your balance in " + c.monthsToPayOff(temp) + " Months.");
+					break;
 				} else if (user == 5) {
 					mainMenu();
 					break;
 				} else {
 					System.out.println("Error Enter a value 1-5.");
+					Credit();
+					break;
 				}
 			}
 		}
+		mainMenu();
 	}
 
 	public static void Checking() {
 		System.out.println("\nChecking Options");
-		System.out.println("1. Check Balance"
+		System.out.print("1. Check Balance"
 				+ "\n2. Withdraw"
 				+ "\n3. Deposit"
-				+ "\n4. Back to Main Menu");
+				+ "\n4. Back to Main Menu"
+				+ "\nWhat do you want to do?: ");
 		int user = u.nextInt();
 		boolean b;
 		if (user == 4) {
@@ -126,28 +138,35 @@ public class ATM {
 		if (b == true) {
 			while (true) {
 				if (user == 1) {
-					ch.toString();
+					System.out.println(ch.toString());
+					break;
 				} else if (user == 2) {
-					ch.withdrawl();
+					ch.withdraw();
+					break;
 				} else if (user == 3) {
 					ch.deposit();
+					break;
 				} else if (user == 4) {
 					mainMenu();
 					break;
 				} else {
 					System.out.println("Error Enter a value 1-5.");
+					Checking();
+					break;
 				}
 			}
 		}
+		mainMenu();
 	}
 
 	public static void Savings() {
 		System.out.println("\nSavings Options");
-		System.out.println("1. Check Balance"
-				+ "\n2. Withdrawl"
+		System.out.print("1. Check Balance"
+				+ "\n2. withdraw"
 				+ "\n3. Deposit"
 				+ "\n4. Display Months till goal"
-				+ "\n5. Back to Main Menu");
+				+ "\n5. Back to Main Menu"
+				+ "\nWhat do you want to do?: ");
 		int user = u.nextInt();
 		boolean b;
 		if (user == 5) {
@@ -158,23 +177,30 @@ public class ATM {
 		if (b == true) {
 			while (true) {
 				if (user == 1) {
-					s.toString();
+					System.out.print(s.toString());
+					break;
 				} else if (user == 2) {
-					s.withdrawl();
+					s.withdraw();
+					break;
 				} else if (user == 3) {
 					s.deposit();
+					break;
 				} else if (user == 4) {
 					System.out.println("How much money would you like your goal to be?: ");
 					double temp = u.nextDouble();
 					System.out.println(
 							"It will take you " + s.monthsTillGoal(temp) + " Months to get to your goal of $" + temp);
+					break;
 				} else if (user == 5) {
 					mainMenu();
 					break;
 				} else {
 					System.out.println("Error Enter a value 1-5.");
+					Savings();
+					break;
 				}
 			}
 		}
+		mainMenu();
 	}
 }

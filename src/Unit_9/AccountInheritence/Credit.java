@@ -43,9 +43,9 @@ public class Credit extends Account {
 
 	}
 
-	public double monthsToPayOff(double m) {
+	public int monthsToPayOff(int m) {
 		double r = apr / 12;
-		return Math.ceil(getBalance() * ((r * (Math.pow((1 + r), m))) / ((Math.pow((1 + r), m) - 1))));
+		return (int) (Math.ceil(getBalance() * ((r * (Math.pow((1 + r), m))) / ((Math.pow((1 + r), m) - 1)))));
 	}
 
 	public String toString() {
