@@ -71,7 +71,7 @@ public class ATM {
 					Savings();
 					break;
 				} else {
-					System.out.println("Error Enter a value 1-5.");
+					System.out.println("Error Enter a value 1-4.");
 				}
 			}
 		}
