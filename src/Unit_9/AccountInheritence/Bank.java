@@ -36,7 +36,7 @@ public class Bank extends Account {
 		System.out.println("Transaction Completed.");
 	}
 
-	public void withdraw() {
+	public void withdrawal() {
 		System.out.println("How much do you want to withdraw?: ");
 		double x = uI.nextDouble();
 		double bal = getBalance();

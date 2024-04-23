@@ -124,7 +124,7 @@ public class ATM {
 	public static void Checking() {
 		System.out.println("\nChecking Options");
 		System.out.print("1. Check Balance"
-				+ "\n2. Withdraw"
+				+ "\n2. withdraw"
 				+ "\n3. Deposit"
 				+ "\n4. Back to Main Menu"
 				+ "\nWhat do you want to do?: ");
@@ -141,7 +141,7 @@ public class ATM {
 					System.out.println(ch.toString());
 					break;
 				} else if (user == 2) {
-					ch.withdraw();
+					ch.withdrawal();
 					break;
 				} else if (user == 3) {
 					ch.deposit();
@@ -162,7 +162,7 @@ public class ATM {
 	public static void Savings() {
 		System.out.println("\nSavings Options");
 		System.out.print("1. Check Balance"
-				+ "\n2. withdraw"
+				+ "\n2. withdrawal"
 				+ "\n3. Deposit"
 				+ "\n4. Display Months till goal"
 				+ "\n5. Back to Main Menu"
@@ -180,7 +180,7 @@ public class ATM {
 					System.out.print(s.toString());
 					break;
 				} else if (user == 2) {
-					s.withdraw();
+					s.withdrawal();
 					break;
 				} else if (user == 3) {
 					s.deposit();

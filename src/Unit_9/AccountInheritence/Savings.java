@@ -30,13 +30,13 @@ public class Savings extends Bank {
 		return (int) Math.ceil((Math.log(st / getBalance())) / (12 * (Math.log(1 + (getInterest() / 12)))));
 	}
 
-	public void withdrawl(int w) {
-		super.withdraw();
+	public void withdrawal(int w) {
+		super.withdrawal();
 		if (getBalance() - w < 0) {
-			System.out.println("Withdrawl amount too high balance would be negative.");
+			System.out.println("Withdrawal amount too high balance would be negative.");
 		}
 		setBalance(getBalance() - w);
-		System.out.println("Trancaction completed.");
+		System.out.println("Transaction completed.");
 	}
 
 	public String toString() {
