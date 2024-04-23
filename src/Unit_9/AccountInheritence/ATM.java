@@ -55,7 +55,8 @@ public class ATM {
 		boolean b;
 		if (user == 4) {
 			b = false;
-			System.out.println("Thank you for visiting the bank!\nHave a good day!");
+			System.out.println("Thank you for visiting the bank!"
+					+ "\nHave a good day!");
 		} else {
 			b = true;
 		}
@@ -71,7 +72,8 @@ public class ATM {
 					Savings();
 					break;
 				} else {
-					System.out.println("Error Enter a value 1-4.");
+					System.out.println("Error."
+							+ "\nEnter a value 1-4.");
 				}
 			}
 		}
@@ -112,7 +114,8 @@ public class ATM {
 					mainMenu();
 					break;
 				} else {
-					System.out.println("Error Enter a value 1-5.");
+					System.out.println("Error."
+							+ "\nEnter a value 1-5.");
 					Credit();
 					break;
 				}
@@ -150,7 +153,8 @@ public class ATM {
 					mainMenu();
 					break;
 				} else {
-					System.out.println("Error Enter a value 1-5.");
+					System.out.println("Error."
+							+ "\nEnter a value 1-5.");
 					Checking();
 					break;
 				}
@@ -195,7 +199,8 @@ public class ATM {
 					mainMenu();
 					break;
 				} else {
-					System.out.println("Error Enter a value 1-5.");
+					System.out.println("Error."
+							+ "\nEnter a value 1-5.");
 					Savings();
 					break;
 				}
