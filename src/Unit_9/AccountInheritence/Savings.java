@@ -40,7 +40,7 @@ public class Savings extends Bank {
 	}
 
 	public String toString() {
-		return super.toString() + "\nInterest: " + interest + "\n Savings balance: " + getBalance();
+		return super.toString() + "\nInterest: " + interest + "\nSavings balance: " + getBalance();
 	}
 
 }
