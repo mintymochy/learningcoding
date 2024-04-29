@@ -7,3 +7,6 @@ print(y1)
 # user input example
 username = input("Enter username:")
 print("Username is: " + username)
+class Meow:
+	def __init__(self) -> None:
+		pass
