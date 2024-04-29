@@ -1,1 +1,1 @@
-place for my school projects so I can get to them on my diff puters :3
+repo to store files while i learn different languages and to move school files between my two computers :3
