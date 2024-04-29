@@ -19,7 +19,7 @@ public class Account {
 
 	public Account() {
 		Random r = new Random();
-		accountId = r.nextInt(99999) + 1x;
+		accountId = r.nextInt(99999) + 1;
 		balance = 0;
 	}
 
