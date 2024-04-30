@@ -121,4 +121,12 @@ class Credit(Account):
         r = float(self.apr/12)
         return (int) (math.ceil(self.balance() * ((r * (math.pow((1 + r), m))) / ((math.pow((1 + r), m) - 1)))))
         
-        
+    def __str__(self):
+        return super().__str__() + f'\nAPR: {self.apr}'
+    
+# ATM class
+class ATM: 
+    ch = Checking()
+    c = Credit()
+    s = Savings()
+    
