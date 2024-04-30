@@ -53,10 +53,10 @@ class Savings(Bank):
         super().__init__(balance, name)
         self.interest = interest
 
-    def get_interest(self):
+    def getInterest(self):
         return self.interest
 
-    def set_interest(self, interest):
+    def setInterest(self, interest):
         self.interest = interest
 
     def months_till_goal(self, st):
@@ -72,3 +72,24 @@ class Savings(Bank):
 
     def __str__(self):
         return super().__str__() + f"\nInterest: {self.interest}\nSavings balance: {self.balance}"
+
+# Checking class
+class Checking(Bank):
+    def __init__(self, balance=0, name="unknown", fee = 0):
+        super().__init__(balance, name)
+        self.fee = fee
+        
+    def getFee(self):
+        return self.fee
+    
+    def setFee(self, fee):
+        self.fee = fee
+        
+    def withdrawal(self):
+        super().withdrawal()
+        if self.balance > 0:
+            self.balance -= self.fee
+            print(f"Fee of ${self.fee} was subtracted as you withdrew too much money.")
+
+    def __str__(self):
+        return super().__str__() + f"\nFee: {self.fee}"
