@@ -26,10 +26,10 @@ class Bank(Account):
         self.name = name
         self.uI = input  # Using input() instead of Scanner for simplicity
 
-    def set_name(self, name):
+    def setName(self, name):
         self.name = name
 
-    def get_name(self):
+    def getName(self):
         return self.name
 
     def deposit(self):
@@ -119,7 +119,7 @@ class Credit(Account):
     def monthsToPayOff(self):
         m = int(input('How many months do you want to pay this off in?: '))
         r = float(self.apr/12)
-        return (int) (math.ceil(self.balance() * ((r * (math.pow((1 + r), m))) / ((math.pow((1 + r), m) - 1)))))
+        return (int) (math.ceil(self.balance() * ((r * (pow((1 + r), m))) / ((pow((1 + r), m) - 1)))))
         
     def __str__(self):
         return super().__str__() + f'\nAPR: {self.apr}'
@@ -129,4 +129,19 @@ class ATM:
     ch = Checking()
     c = Credit()
     s = Savings()
-    
+    print('Welcome! Today you will be setting up a credit card account, checking account, and a savings account.')
+    name = input('Whats your name!: ')
+    tbal = float(input)('What is your checking account balance: ')
+    apr = float(input('Enter your APR - (0.XX): '))
+    cbal = float(input('What is your credit card balance: '))
+    f = float(input('What is your overdraft fee?: '))
+    sbal = float(input('What is your savings account balance: '))
+    i = float(input('Enter your interest rate - (0.XX): '))
+    ch.setBalance(tbal) 
+    ch.setName(name)
+    ch.setFee(f)
+    c.setBalance(cbal)
+    c.setapr(apr)
+    s.setBalance(sbal)
+    s.setInterest(i)
+    s.setName(name)
