@@ -93,3 +93,32 @@ class Checking(Bank):
 
     def __str__(self):
         return super().__str__() + f"\nFee: {self.fee}"
+    
+# Credit class
+class Credit(Account):
+    def __init__(self, balance=0, apr = 0.0):
+        super().__init__(balance)
+        self.apr = apr
+        
+    def getAPR(self):
+        return self.apr
+    
+    def setAPR(self, apr):
+        self.apr = apr
+    
+    def makePurchase(self):
+        cost = float(input)("How much is your purchase?: ")
+        self.balance + cost
+        print("Transaction Completed.")
+        
+    def monthlyStatement(self):
+        print()
+        print(f'balance if paid on time: ${ self.balance}')
+        print(f'Balance if not paid on time: ${self.balance * (self.apr / 12)}')
+        
+    def monthsToPayOff(self):
+        m = int(input('How many months do you want to pay this off in?: '))
+        r = float(self.apr/12)
+        return (int) (math.ceil(self.balance() * ((r * (math.pow((1 + r), m))) / ((math.pow((1 + r), m) - 1)))))
+        
+        
