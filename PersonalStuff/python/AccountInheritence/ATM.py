@@ -145,3 +145,17 @@ class ATM:
     s.setBalance(sbal)
     s.setInterest(i)
     s.setName(name)
+    
+    def checking(ch):
+        print('\nCredit Options')
+        print("1. Check Balance"
+			+ "\n2. Make Purchase"
+			+ "\n3. Display Monthly Statement"
+			+ "\n4. Create Monthly Payments"
+			+ "\n5. Back to Main Menu")
+        uI = int(input('What do you want to do?: '))
+    def savings(s):
+        
+        
+    def credit(c):
+        
