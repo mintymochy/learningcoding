@@ -32,4 +32,9 @@ public class Sign {
 		this.x = x;
 	}
 
+	public String getSign() {
+
+		return str;
+	}
+
 }
