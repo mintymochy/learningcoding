@@ -4,3 +4,8 @@ int main() {
   printf("Hello World!");
   return 0;
 }
+
+int meow(){
+  printf("meow");
+  return 0;
+}
