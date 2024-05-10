@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class TicTacToe extends ConnectFour {
     char[][] b = new char[3][3];
     Scanner scanner = new Scanner(System.in);
+    int turn = 0;
+    
 
     @Override
     public void CreateBoard() {
@@ -33,17 +35,39 @@ public class TicTacToe extends ConnectFour {
     }
 
     @Override
-    public void DropX() {
-        System.out.println("Where do you want to place your x? enter the letter then the number.");
-        int row = scanner.nextInt() - 1;
-        int col;
-        String coltemp = scanner.next().toUpperCase();
-        if (coltemp.equals("A")) {
+    public void Drop() {
+        char player = ' ';
+        int row = 0;
+        int col = 0;
+        if (turn == 0) {
+            player = 'X';
+        } else {
+            player = 'O';
+        }
+        System.out.print("Where do you want to place your " + player + " ?: ");
+        String s1 = scanner.next().toUpperCase().stripTrailing();
+        char c1 = s1.charAt(0);//col
+        char c2 = s1.charAt(1);//row
+        if (c1 == 'A') {
             col = 0;
-        } else if (coltemp.equals("B")) {
+        } else if (c1 == 'B') {
             col = 1;
-        } else if (coltemp.equals("C")) {
+        } else if (c1 == 'C') {
             col = 2;
+        }
+        if (c2 == '1') {
+            row = 0;
+        } else if (c2 == '2') {
+            row = 1;
+        } else if (c2 == '3') {
+            row = 2;
+        }
+        b[row][col] = player;
+        //ending turn 
+        if (turn == 0) {
+            turn = 1;
+        } else {
+            turn = 0;
         }
 
     }
@@ -52,4 +76,5 @@ public class TicTacToe extends ConnectFour {
     public void DropO() {
 
     }
+    
 }

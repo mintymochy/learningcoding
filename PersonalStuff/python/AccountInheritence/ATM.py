@@ -112,7 +112,7 @@ class Credit(Account):
         print("Transaction Completed.")
         
     def monthlyStatement(self):
-        print()
+        print() 
         print(f'balance if paid on time: ${ self.balance}')
         print(f'Balance if not paid on time: ${self.balance * (self.apr / 12)}')
         

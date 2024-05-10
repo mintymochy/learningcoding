@@ -9,31 +9,13 @@ import java.util.*;
  :3
 */
 public class ConnectFour {
-    private int width = 6;
-    private int height = 6;
+    int width = 6;
+    int height = 6;
     int bottom_row = width - 1;
     char[][] board = new char[width][height];
     static Scanner uI = new Scanner(System.in);
+    int turn = 0;
 
-    public ConnectFour() {
-
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getWidth() {
-        return height;
-    }
 
     public void CreateBoard() { // creates the board
         for (int w = 0; width > w; w += 1) {
@@ -55,7 +37,10 @@ public class ConnectFour {
         System.out.println("̅‾‾‾‾‾‾‾‾‾‾‾‾̅");
     }
 
-    public void DropX() {
+    public void Drop() {
+        if (turn == 1) {
+            
+        }
         int counter = 1;
         System.out.print("Player 1's Turn!\nWhere do you want to drop? (enter 0-5): ");
         int column = uI.nextInt();
