@@ -23,4 +23,5 @@ class profile{
       void setName(std::string new_name){
         name = new_name;
       }
+      
   };
