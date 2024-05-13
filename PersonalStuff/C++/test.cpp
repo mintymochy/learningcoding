@@ -8,9 +8,27 @@ bool myBoolean = true;       // Boolean (true or false)
 
 
 int main() {
+  string socialStatus;
   cout << "m";
   cout << "meow meow meow" << endl;
   int meows= 35;
   cout << "I am " << meows << " years old.";
+  cout << "Enter your social status: ";
+  cin >> socialStatus;
   return 0;
 } 
+class Clock {
+private:
+  int time = 1200;
+
+public:
+  // Accessor function for time
+  int getTime() {
+    return time;
+  }
+};
+
+int main() {
+  Clock alarm;
+  std::cout << alarm.getTime(); // Output: 1200
+}
