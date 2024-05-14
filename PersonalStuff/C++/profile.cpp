@@ -12,9 +12,8 @@ private:
   string city;
   string country;
   string pronoun;
-  vector<string> hobbies;
-
 public:
+  vector<string> hobbies;
   profile() {
     name = "user";
     pronoun = "they/them";
@@ -46,6 +45,10 @@ public:
     setCity(c);
     setCountry(co);
     cout << "Now enter all of your hobbies! \nWhen you are done enter 'n'.";
+    do {
+      cin >> hobby;
+      hobbies.push_back(hobby);
+    } while (hobby /= "n");
   }
 
   void setName(string name) {

@@ -11,12 +11,12 @@ int main() {
   string socialStatus;
   cout << "m";
   cout << "meow meow meow" << endl;
-  int meows= 35;
+  int meows = 35;
   cout << "I am " << meows << " years old.";
   cout << "Enter your social status: ";
   cin >> socialStatus;
   return 0;
-} 
+}
 class Clock {
 private:
   int time = 1200;
