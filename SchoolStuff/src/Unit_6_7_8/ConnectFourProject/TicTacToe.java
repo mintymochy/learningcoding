@@ -11,7 +11,6 @@ public class TicTacToe extends ConnectFour {
     char[][] b = new char[3][3];
     Scanner scanner = new Scanner(System.in);
     int turn = 0;
-    
 
     @Override
     public void CreateBoard() {
@@ -46,8 +45,8 @@ public class TicTacToe extends ConnectFour {
         }
         System.out.print("Where do you want to place your " + player + " ?: ");
         String s1 = scanner.next().toUpperCase().stripTrailing();
-        char c1 = s1.charAt(0);//col
-        char c2 = s1.charAt(1);//row
+        char c1 = s1.charAt(0);// col
+        char c2 = s1.charAt(1);// row
         if (c1 == 'A') {
             col = 0;
         } else if (c1 == 'B') {
@@ -63,7 +62,7 @@ public class TicTacToe extends ConnectFour {
             row = 2;
         }
         b[row][col] = player;
-        //ending turn 
+        // ending turn
         if (turn == 0) {
             turn = 1;
         } else {
@@ -76,5 +75,5 @@ public class TicTacToe extends ConnectFour {
     public void DropO() {
 
     }
-    
+
 }

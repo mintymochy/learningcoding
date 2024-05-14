@@ -4,7 +4,6 @@ using namespace std;
 
 int main()
 {
-
   return 0;
 }
 class profile
@@ -28,6 +27,23 @@ public:
   }
   void createProfile()
   {
+    int a;
+    string n;
+    string p;
+    string c;
+    string co;
+    string hobby;
+    cout << "Time to create your user profile!";
+    cout << "Enter your name: ";
+    cin >> n;
+    cout << "Enter your age";
+    cin >> a;
+    cout << "Enter your pronouns";
+    cin >> p;
+    cout << "Enter your city";
+    cin >> c;
+    cout << "Enter your country";
+    cin >> co;
   }
 
   void setName(string name)
