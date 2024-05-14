@@ -2,31 +2,27 @@
 #include <vector>
 using namespace std;
 
-int main()
-{
+int main() {
   return 0;
 }
-class profile
-{
+class profile {
 private:
   string name;
   int age;
   string city;
   string country;
-  string pronouns;
+  string pronoun;
   vector<string> hobbies;
 
 public:
-  profile()
-  {
+  profile() {
     name = "user";
-    pronouns = "they/them";
+    pronoun = "they/them";
     city = "unknown";
     country = "unknown";
     hobbies = hobbies;
   }
-  void createProfile()
-  {
+  void createProfile() {
     int a;
     string n;
     string p;
@@ -38,41 +34,41 @@ public:
     cin >> n;
     cout << "Enter your age";
     cin >> a;
-    cout << "Enter your pronouns";
+    cout << "Enter your pronoun";
     cin >> p;
     cout << "Enter your city";
     cin >> c;
     cout << "Enter your country";
     cin >> co;
+    setName(n);
+    setAge(a);
+    setPronoun(p);
+    setCity(c);
+    setCountry(co);
+    cout << "Now enter all of your hobbies! \nWhen you are done enter 'n'.";
   }
 
-  void setName(string name)
-  {
+  void setName(string name) {
     name = name;
   }
 
-  string getName()
-  {
+  string getName() {
     return name;
   }
 
-  void setAge(int age)
-  {
+  void setAge(int age) {
     age = age;
   }
 
-  int getAge()
-  {
+  int getAge() {
     return age;
   }
 
-  void setCity(string city)
-  {
+  void setCity(string city) {
     city = city;
   }
 
-  string getCity()
-  {
+  string getCity() {
     return city;
   }
 
@@ -81,13 +77,18 @@ public:
     country = country;
   }
 
-  string getCountry()
-  {
+  string getCountry() {
     return country;
   }
 
-  void addHobbies(string hobby)
-  {
+  void setPronoun(string pronoun) {
+    pronoun = pronoun;
+  }
+  string getPronoun() {
+    return pronoun;
+  }
+
+  void addHobbies(string hobby) {
     hobbies.push_back(hobby);
   }
 };
