@@ -2,9 +2,13 @@
 #include <vector>
 using namespace std;
 
-int main() {
-  return 0;
+void main() {
+
 }
+void uI() {
+  cout << "";
+}
+
 class profile {
 private:
   string name;
@@ -75,8 +79,7 @@ public:
     return city;
   }
 
-  void setCountry(string country)
-  {
+  void setCountry(string country) {
     country = country;
   }
 

@@ -1,5 +1,23 @@
 b = [["", "", ""], ["", "", ""], ["", "", ""]]
 turn = 0
+gameStart = bool(0)
+
+playerInput = input("Do you want to start a game? (y/n): ")
+if playerInput == "y":
+    playGame()
+    gameStart == bool(1)
+else:
+    gameStart == bool(0)
+
+
+def playGame():
+    createBoard()
+    printBoard()
+    while checkWin() != bool(1):
+        Drop()
+        checkWin()
+        Drop()
+        checkWin()
 
 
 def printBoard():
@@ -9,6 +27,7 @@ def printBoard():
         for h in range(0, 3, 3):
             print(f"{w + 1} | {b[w][h]} | {b[w][h + 1]} | {b[w][h + 2]} |")
     print("  +---+---+---+")
+    print("")
 
 
 def createBoard():
@@ -48,4 +67,12 @@ def Drop():
 
 
 def checkWin():
-    win = bool(0)
+    win = input("Has anyone won yet? (y/n): ")
+    if win == "y":
+        win = bool(1)
+        print("player wins!")
+        return win
+    elif win == "n":
+        win = bool(0)
+        print("next round!")
+        return win

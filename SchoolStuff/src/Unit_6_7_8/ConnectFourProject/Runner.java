@@ -2,6 +2,8 @@ package Unit_6_7_8.ConnectFourProject;
 
 import java.util.*;
 
+import Unit_6_7_8.tictactoe;
+
 /*
  04-02-2024
  augustjones
@@ -9,13 +11,13 @@ import java.util.*;
  */
 public class Runner {
     static ConnectFour connectFour = new ConnectFour();
-    static TicTacToe tictactoe = new TicTacToe();
+    static TicTacToe TicTacToe = new TicTacToe();
 
     public static void main(String[] args) {
-        playtictactoe();
+        playticTacToe();
     }
 
-    public static void playconnnectFour() {
+    public static void playConnnectFour() {
         connectFour.CreateBoard();
         connectFour.PrintBoard();
         do {
@@ -27,11 +29,11 @@ public class Runner {
         } while (!connectFour.checkWin()); // keeps running the connectFour until check win returns true
     }
 
-    public static void playtictactoe() {
-        tictactoe.CreateBoard();
-        tictactoe.PrintBoard();
+    public static void playticTacToe() {
+        TicTacToe.CreateBoard();
+        TicTacToe.PrintBoard();
         // do
-        // {tictactoe.DropX();tictactoe.PrintBoard();tictactoe.checkWin();tictactoe.DropO();tictactoe.PrintBoard();}
-        // while (!tictactoe.checkWin());
+        // {ticTacToe.DropX();ticTacToe.PrintBoard();ticTacToe.checkWin();ticTacToe.DropO();ticTacToe.PrintBoard();}
+        // while (!ticTacToe.checkWin());
     }
 }
