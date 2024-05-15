@@ -48,7 +48,7 @@ public:
     do {
       cin >> hobby;
       hobbies.push_back(hobby);
-    } while (hobby /= "n");
+    } while (hobby != "n");
   }
 
   void setName(string name) {
