@@ -7,6 +7,7 @@ print(y1)
 # user input example
 username = input("Enter username:")
 print("Username is: " + username)
+list = ["meow", "meow", "meow"]
 if y1 == 4:
     print("meow")
 elif y1 == 3:
