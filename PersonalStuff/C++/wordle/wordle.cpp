@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 void main() {
@@ -28,5 +29,7 @@ public:
             }
         }
     }
+    void guess() {
 
+    }
 };
