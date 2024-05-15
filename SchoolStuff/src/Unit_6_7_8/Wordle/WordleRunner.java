@@ -11,7 +11,7 @@ public class WordleRunner {
     static String[] alp = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
             "S", "T", "U", "V", "W", "X", "Y", "Z" };
 
-    public static void CreateWordle() {
+    public void CreateWordle() {
         for (int i = 0; i < game.length; i++) {
             for (int k = 0; k < game[0].length; k++) {
                 game[i][k] = " ";

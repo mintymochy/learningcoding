@@ -5,7 +5,7 @@ gameStart = bool(0)
 playerInput = input("Do you want to start a game? (y/n): ")
 if playerInput == "y":
     playGame()
-    gameStart == bool(1)
+    gameStart == bool(1)    
 else:
     gameStart == bool(0)
 
