@@ -13,7 +13,7 @@ int main() {
   cout << "meow meow meow" << endl;
   int meows = 35;
   cout << "I am " << meows << " years old.";
-  cout << "Enter your social status: ";
+  cout << "Enter your ssn pwease :3 : ";
   cin >> socialStatus;
   return 0;
 }
