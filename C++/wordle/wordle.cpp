@@ -1,17 +1,23 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 void main() {
 
 }
-class MyClass {
+class wordle {
 private:
 
 public:
-    char alp = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
-                "T", "U", "V", "W", "X", "Y", "Z" };
+    vector<char> alp[26];
     char board[5][6];
+
+    void createALP(vector<char> arr1) {
+        for (int x : arr1) {
+            arr1.push_back(char(x));
+        }
+    }
 
     void printGame() {
         for (int r = 0; r < sizeof(board) / sizeof(int); r++) {
@@ -29,7 +35,16 @@ public:
             }
         }
     }
-    void guess() {
 
+    void guess() {
+        string userInput;
+        cout << "What is your first guess?: ";
+        cin >> userInput;
+
+    }
+
+    vector<int> check(vector<int> arr) {
+
+        return arr;
     }
 };
