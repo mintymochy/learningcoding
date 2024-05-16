@@ -1,4 +1,4 @@
-package PersonalStuff.java.tictactoe;
+package personal;
 
 import java.util.*;
 
