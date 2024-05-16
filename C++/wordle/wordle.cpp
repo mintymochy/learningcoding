@@ -1,14 +1,11 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
-void main() {
-
+int main() {
+    return 0;
 }
 class wordle {
-private:
-
 public:
     vector<char> alp[26];
     char board[5][6];
