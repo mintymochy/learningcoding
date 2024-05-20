@@ -1,30 +1,20 @@
 import numpy as np
 
-alp = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-]
+word = "ready"
+numOfCorrectLetters = 0
+guesses = []
+
+
+def guess(self):
+    guess = input("what is your guess!: ")
+    guesses.append(guess)
+    checkGuess(guess)
+
+
+def checkGuess(self, guess):
+    for x in guess:
+        if guess[x] == word[x]:
+            numOfCorrectLetters += 1
+
+
+# def printBoard(self):
