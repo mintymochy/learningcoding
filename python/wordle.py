@@ -6,12 +6,14 @@ guesses = []
 
 
 def guess(self):
-    if len(guess) == 5:    
-        guess = input("what is your guess!: "):
-        guesses.append(guess)
-        checkGuess(guess)
-    else:
-        
+    x = 0
+    while x != 1:
+        guess = input("what is your guess!: ")
+        if len(guess) != 5:
+            guess = input("that was too short/long! enter a 5 character guess!: ")
+            break
+    guesses.append(guess)
+    checkGuess(guess)
 
 
 def checkGuess(self, guess):
