@@ -6,9 +6,12 @@ guesses = []
 
 
 def guess(self):
-    guess = input("what is your guess!: ")
-    guesses.append(guess)
-    checkGuess(guess)
+    if len(guess) == 5:    
+        guess = input("what is your guess!: "):
+        guesses.append(guess)
+        checkGuess(guess)
+    else:
+        
 
 
 def checkGuess(self, guess):
