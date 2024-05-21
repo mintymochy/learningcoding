@@ -17,4 +17,9 @@ def checkGuess(self, guess):
             numOfCorrectLetters += 1
 
 
-# def printBoard(self):
+def printBoard(self):
+    print("--------")
+    for x in guesses:
+        print(f"| " + guesses[x] + " |")
+        print("")
+    print("--------")
