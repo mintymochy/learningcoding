@@ -7,6 +7,7 @@ int main() {
 class battleship {
 public:
     char board[10][10];
+    string alp[10] = { "A", "B", "C", "D", "E", "F", "H", "I", "J", "K" };
     void createBoard() {
         for (int r = 0; r < sizeof(board) / sizeof(int); r++) {
             for (int w = 0; w < sizeof(board[0]) / sizeof(int); w++) {
