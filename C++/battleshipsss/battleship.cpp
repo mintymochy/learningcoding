@@ -18,7 +18,7 @@ public:
     void printBoard() {
         for (int r = 0; r < sizeof(board) / sizeof(int); r++) {
             for (int w = 0; w < sizeof(board[0]) / sizeof(int); w++) {
-                cout << "";
+                cout << ;
             }
         }
     }
