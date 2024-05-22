@@ -11,7 +11,7 @@ def guess(self):
         guess = input("what is your guess!: ")
         if len(guess) != 5:
             guess = input("that was too short/long! enter a 5 character guess!: ")
-            
+
             break
     guesses.append(guess)
     checkGuess(guess)

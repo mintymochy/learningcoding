@@ -14,9 +14,10 @@ class battleship {
     }
 
     public void printBoard() {
+        System.out.print()
         for (int r = 0; r <= board.length; r++) {
             for (int w = 0; w <= board[0].length; w++) {
-                board[r][w] = ' ';
+
             }
         }
     }
