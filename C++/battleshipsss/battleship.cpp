@@ -7,7 +7,7 @@ int main() {
 class battleship {
 public:
     char board[10][10];
-    string alp[10] = { "A", "B", "C", "D", "E", "F", "H", "I", "J", "K" };
+    char alp[10] = { 'A', 'B', 'C', 'D', 'E', 'F', 'H', 'I', 'J', 'K' };
     void createBoard() {
         for (int r = 0; r < sizeof(board) / sizeof(int); r++) {
             for (int w = 0; w < sizeof(board[0]) / sizeof(int); w++) {
@@ -19,7 +19,7 @@ public:
     void printBoard() {
         for (int r = 0; r < sizeof(board) / sizeof(int); r++) {
             for (int w = 0; w < sizeof(board[0]) / sizeof(int); w++) {
-                cout << ;
+                cout << alp[r] + " | " + board[r][w] + board[r][w + 1] + board[r][w + 2] + board[r][w + 3] + board[r][w + 4] + " |";
             }
         }
     }
@@ -28,13 +28,19 @@ public:
         string shipPlacement;
         cout << "Where do you want to place your ship?: ";
         cin >> shipPlacement;
+
     }
 
     void attack() {
 
     }
 
-    void checkShot() {
+    void checkShot(string shot) {
+        char shotLetter = shot[0];
+        for (int i = 0; i <= sizeof(alp); i++) {
+            if (shotLetter == alp[i]) {
 
+            }
+        }
     }
 };
