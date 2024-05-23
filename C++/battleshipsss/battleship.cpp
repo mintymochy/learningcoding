@@ -35,12 +35,13 @@ public:
 
     }
 
-    void checkShot(string shot) {
+    int checkShot(string shot) {
         char shotLetter = shot[0];
         for (int i = 0; i <= sizeof(alp); i++) {
-            if (shotLetter == alp[i]) {
-
+            if (shotLetter != alp[i]) {
+                return -1;
             }
+            return i;
         }
     }
 };
