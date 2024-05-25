@@ -1,8 +1,16 @@
 import numpy as np
 
 x = [10][10]
+alp = ["A", "B", "C", "D", "E", "F", "H", "I", "J", "K"]
 
 
-class board:
-    def __init__(self) -> None:
-        pass
+def attack(self):
+    print()
+
+
+def addShip():
+    print()
+
+
+def checkShot():
+    print()

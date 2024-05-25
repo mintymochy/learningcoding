@@ -32,7 +32,9 @@ public:
     }
 
     void attack() {
-
+        string attack;
+        cout << "Where do you want to place your ship?: ";
+        cin >> attack;
     }
 
     int checkShot(string shot) {
