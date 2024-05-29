@@ -4,6 +4,7 @@ import java.util.*;
 
 class battleship {
     static char[][] board = new char[10][10];
+    static ArrayList<rows> board2 = new ArrayList<rows>();
 
     public void createBoard() {
         for (int r = 0; r <= board.length; r++) {
@@ -14,7 +15,7 @@ class battleship {
     }
 
     public void printBoard() {
-        System.out.print()
+        System.out.print("");
         for (int r = 0; r <= board.length; r++) {
             for (int w = 0; w <= board[0].length; w++) {
 
