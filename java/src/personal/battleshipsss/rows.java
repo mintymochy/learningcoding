@@ -10,7 +10,11 @@ import java.util.*;
 public class rows {
     static char[] row = new char[10];
 
-    public void setRow(int rowNum) {
+    public char[] getRow() {
+        return row;
+    }
 
+    public void setRow(int boardNum, char shot) {
+        row[boardNum] = shot;
     }
 }
