@@ -14,4 +14,7 @@ public class board {
         this.board = board;
     }
 
+    public void getRow() {
+
+    }
 }

@@ -3,13 +3,17 @@ package personal.battleshipsss;
 import java.util.*;
 
 class battleship {
+    char hit = 'X';
+    char miss = 'O';
+    char empty = ' ';
+    char ship = '=';
     static char[][] board = new char[10][10];
-    static ArrayList<rows> board2 = new ArrayList<rows>();
+    static Scanner uI = new Scanner(System.in);
 
     public void createBoard() {
         for (int r = 0; r <= board.length; r++) {
             for (int w = 0; w <= board[0].length; w++) {
-                board[r][w] = ' ';
+                board[r][w] = empty;
             }
         }
     }
@@ -23,15 +27,15 @@ class battleship {
         }
     }
 
-    public void addShip() {
-
-    }
-
     public void attack() {
 
     }
 
     public void checkShot() {
+
+    }
+
+    public void placeShips() {
 
     }
 
