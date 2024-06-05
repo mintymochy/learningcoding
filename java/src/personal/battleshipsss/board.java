@@ -14,7 +14,11 @@ public class board {
         this.board = board;
     }
 
-    public void getRow() {
+    public rows getRow(int rowNumber) {
+        return board.get(rowNumber);
+    }
+
+    public void addRow() {
 
     }
 }
