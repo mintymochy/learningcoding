@@ -7,8 +7,12 @@ class battleship {
     char miss = 'O';
     char empty = ' ';
     char ship = '=';
-    static char[][] board = new char[10][10];
     static Scanner uI = new Scanner(System.in);
+
+    public void playerTurn() {
+        System.out.print("what do you want to do next?: ");
+        String input = uI.nextLine();
+    }
 
     public void printBoard() {
 
