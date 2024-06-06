@@ -7,16 +7,22 @@ class battleship {
     char miss = 'O';
     char empty = ' ';
     char ship = '=';
-    static Scanner uI = new Scanner(System.in);
+    static Scanner u = new Scanner(System.in);
     board b = new board();
 
     public void playerTurn() {
         System.out.print("what do you want to do next?: ");
-        String input = uI.nextLine();
+        String input = u.next();
+        while (input.length() != 2) {
+            System.out.print("Value not valid. Try again: ");
+            input = u.next();
+            if (input.length() == 2)
+                break;
+        }
     }
 
     public void printBoard() {
-        b.getBoard();
+
     }
 
     public void attack() {
@@ -24,8 +30,30 @@ class battleship {
     }
 
     public void checkShot(String shot) {
-        switch (shot) {
-
+        String letter = shot.substring(0, 1).toLowerCase();
+        switch (letter) {
+            case "a":
+                break;
+            case "b":
+                break;
+            case "c":
+                break;
+            case "d":
+                break;
+            case "e":
+                break;
+            case "f":
+                break;
+            case "g":
+                break;
+            case "h":
+                break;
+            case "i":
+                break;
+            case "j":
+                break;
+            default:
+                System.out.println("Error :3");
         }
     }
 
