@@ -14,6 +14,10 @@ public class board {
         this.board = board;
     }
 
+    public ArrayList<rows> getBoard() {
+        return board;
+    }
+
     public rows getRow(int rowNumber) {
         return board.get(rowNumber);
     }
