@@ -17,4 +17,10 @@ public class rows {
     public void setRow(int boardNum, char shot) {
         row[boardNum] = shot;
     }
+
+    public void fillRow() {
+        for (char x : row) {
+            row[x] = ' ';
+        }
+    }
 }
