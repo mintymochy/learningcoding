@@ -9,6 +9,7 @@ class battleship {
     char ship = '=';
     static Scanner u = new Scanner(System.in);
     board b = new board();
+    rows r = new rows();
 
     public void playerTurn() {
         System.out.print("what do you want to do next?: ");
@@ -23,7 +24,9 @@ class battleship {
 
     public void printBoard() {
         for (int x = 0; x < b.getBoard().size(); x++) {
+            for (int y = 0; y < r.getLength(); y++) {
 
+            }
         }
     }
 
@@ -31,8 +34,8 @@ class battleship {
 
     }
 
-    public void checkShot(String shot) {
-        int row;
+    public int checkShot(String shot) {
+        int row = 0;
         String letter = shot.substring(0, 1).toLowerCase();
         switch (letter) {
             case "a":
@@ -68,6 +71,7 @@ class battleship {
             default:
                 System.out.println("Error :3");
         }
+        return row;
     }
 
     public void placeShips() {

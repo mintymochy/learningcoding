@@ -18,6 +18,10 @@ public class rows {
         row[boardNum] = shot;
     }
 
+    public int getLength() {
+        return row.length;
+    }
+
     public void fillRow() {
         for (char x : row) {
             row[x] = ' ';
