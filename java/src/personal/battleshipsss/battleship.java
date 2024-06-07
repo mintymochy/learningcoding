@@ -33,24 +33,34 @@ class battleship {
         String letter = shot.substring(0, 1).toLowerCase();
         switch (letter) {
             case "a":
+
                 break;
             case "b":
+
                 break;
             case "c":
+
                 break;
             case "d":
+
                 break;
             case "e":
+
                 break;
             case "f":
+
                 break;
             case "g":
+
                 break;
             case "h":
+
                 break;
             case "i":
+
                 break;
             case "j":
+
                 break;
             default:
                 System.out.println("Error :3");
