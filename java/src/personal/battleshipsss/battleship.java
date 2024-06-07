@@ -23,6 +23,8 @@ class battleship {
     }
 
     public void printBoard() {
+        System.out.println("   A B C D E F G H I J ");
+        System.out.println("  +-+-+-+-+-+-+-+-+-+-+");
         for (int x = 0; x < b.getBoard().size(); x++) {
             for (int y = 0; y < r.getLength(); y++) {
 
@@ -34,44 +36,60 @@ class battleship {
 
     }
 
-    public int checkShot(String shot) {
-        int row = 0;
+    public int checkShotLetter(String shot) {
         String letter = shot.substring(0, 1).toLowerCase();
         switch (letter) {
             case "a":
-                row = 0;
-                break;
+                return 0;
             case "b":
-                row = 1;
-                break;
+                return 1;
             case "c":
-                row = 2;
-                break;
+                return 2;
             case "d":
-                row = 3;
-                break;
+                return 3;
             case "e":
-                row = 4;
-                break;
+                return 4;
             case "f":
-                row = 5;
-                break;
+                return 5;
             case "g":
-                row = 6;
-                break;
+                return 6;
             case "h":
-                row = 7;
-                break;
+                return 7;
             case "i":
-                row = 8;
-                break;
+                return 8;
             case "j":
-                row = 9;
-                break;
+                return 9;
             default:
-                System.out.println("Error :3");
+                return -1;
         }
-        return row;
+    }
+
+    public int checkShotNumber(String shot) {
+        String number = shot.substring(1, 2).toLowerCase();
+        switch (number) {
+            case "0":
+                return 0;
+            case "1":
+                return 1;
+            case "2":
+                return 2;
+            case "3":
+                return 3;
+            case "4":
+                return 4;
+            case "5":
+                return 5;
+            case "6":
+                return 6;
+            case "7":
+                return 7;
+            case "8":
+                return 8;
+            case "9":
+                return 9;
+            default:
+                return -1;
+        }
     }
 
     public void placeShips() {
