@@ -9,14 +9,13 @@ import java.util.*;
  */
 public class board {
     static ArrayList<rows> board = new ArrayList<rows>();
-    static rows r = new rows();
 
     public board() {
         this.board = board;
     }
 
-    public void fillBoard() {
-        board
+    public void fillBoard(rows row) {
+        board.add(row);
     }
 
     public ArrayList<rows> getBoard() {
@@ -30,4 +29,5 @@ public class board {
     public void addRow(rows row) {
         board.add(row);
     }
+
 }

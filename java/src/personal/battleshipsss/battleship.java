@@ -20,6 +20,20 @@ class battleship {
     rows row9 = new rows();
     rows row10 = new rows();
 
+    public void gameStart() {
+        b.fillBoard(row1);
+        b.fillBoard(row2);
+        b.fillBoard(row3);
+        b.fillBoard(row4);
+        b.fillBoard(row5);
+        b.fillBoard(row6);
+        b.fillBoard(row7);
+        b.fillBoard(row8);
+        b.fillBoard(row9);
+        b.fillBoard(row10);
+
+    }
+
     public void playerTurn() {
         System.out.print("what do you want to do next?: ");
         String input = u.next();
@@ -37,7 +51,7 @@ class battleship {
         for (int x = 0; x < b.getBoard().size(); x++) {
             for (int y = 0; y < row1.getLength(); y++) {
                 rows row = b.getRow(x);
-
+                System.out.println();
             }
         }
     }
