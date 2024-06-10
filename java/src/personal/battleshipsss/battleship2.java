@@ -9,7 +9,11 @@ class battleship2 {
     char ship = '=';
 
     static Scanner u = new Scanner(System.in);
-    static char[][] board = new char[10][10];
+    static char[][] b = new char[10][10];
+
+    public static void main(String args[]) {
+
+    }
 
     public void playerTurn() {
         System.out.print("what do you want to do next?: ");
@@ -23,18 +27,19 @@ class battleship2 {
     }
 
     public void createBoard() {
-        for (int r = 0; r <= board.length; r++) {
-            for (int w = 0; w <= board[0].length; w++) {
-                board[r][w] = empty;
+        for (int r = 0; r <= b.length; r++) {
+            for (int c = 0; c <= b[0].length; c++) {
+                b[r][c] = empty;
             }
         }
     }
 
     public void printBoard() {
-        System.out.print("");
-        for (int r = 0; r <= board.length; r++) {
-            for (int w = 0; w <= board[0].length; w++) {
-
+        System.out.println("   A B C D E F G H I J ");
+        System.out.println("  +-+-+-+-+-+-+-+-+-+-+");
+        for (int r = 0; r <= b.length; r++) {
+            for (int c = 0; c <= b[0].length; c++) {
+                System.out.println((c + 1) + " | " + b[r][c] + " | " + b[r][c + 1] + " | " + b[r][c + 2] + " |");
             }
         }
     }
