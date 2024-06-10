@@ -9,7 +9,16 @@ class battleship {
     char ship = '=';
     static Scanner u = new Scanner(System.in);
     board b = new board();
-    rows r = new rows();
+    rows row1 = new rows();
+    rows row2 = new rows();
+    rows row3 = new rows();
+    rows row4 = new rows();
+    rows row5 = new rows();
+    rows row6 = new rows();
+    rows row7 = new rows();
+    rows row8 = new rows();
+    rows row9 = new rows();
+    rows row10 = new rows();
 
     public void playerTurn() {
         System.out.print("what do you want to do next?: ");
@@ -26,14 +35,11 @@ class battleship {
         System.out.println("   A B C D E F G H I J ");
         System.out.println("  +-+-+-+-+-+-+-+-+-+-+");
         for (int x = 0; x < b.getBoard().size(); x++) {
-            for (int y = 0; y < r.getLength(); y++) {
+            for (int y = 0; y < row1.getLength(); y++) {
+                rows row = b.getRow(x);
 
             }
         }
-    }
-
-    public void attack() {
-
     }
 
     public int checkShotLetter(String shot) {
@@ -93,6 +99,10 @@ class battleship {
     }
 
     public void placeShips() {
+
+    }
+
+    public void attack() {
 
     }
 }

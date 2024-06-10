@@ -8,10 +8,15 @@ import java.util.*;
  :3
  */
 public class board {
-    ArrayList<rows> board = new ArrayList<rows>();
+    static ArrayList<rows> board = new ArrayList<rows>();
+    static rows r = new rows();
 
     public board() {
         this.board = board;
+    }
+
+    public void fillBoard() {
+        board
     }
 
     public ArrayList<rows> getBoard() {
@@ -22,7 +27,7 @@ public class board {
         return board.get(rowNumber);
     }
 
-    public void addRow() {
-
+    public void addRow(rows row) {
+        board.add(row);
     }
 }
