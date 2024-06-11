@@ -15,6 +15,9 @@ class battleship2 {
 
     }
 
+    public void startGame() {
+    }
+
     public void playerTurn() {
         System.out.print("what do you want to do next?: ");
         String input = u.next();
@@ -39,8 +42,11 @@ class battleship2 {
         System.out.println("  +-+-+-+-+-+-+-+-+-+-+");
         for (int r = 0; r <= b.length; r++) {
             for (int c = 0; c <= b[0].length; c++) {
-                System.out.println((c + 1) + " | " + b[r][c] + " | " + b[r][c + 1] + " | " + b[r][c + 2] + " |");
+                System.out.println((r + 1) + " | " + b[r][c] + " | " + b[r][c + 1] + " | " + b[r][c + 2] + " | "
+                        + b[r][c + 3] + " | " + b[r][c + 4] + " | " + b[r][c + 5] + " | " + b[r][c + 6] + " | "
+                        + b[r][c + 7] + " | " + b[r][c + 8] + " | " + b[r][c + 9] + " | " + b[r][c + 10] + " |");
             }
+            System.out.println("  +-+-+-+-+-+-+-+-+-+-+");
         }
     }
 
