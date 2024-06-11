@@ -51,6 +51,8 @@ class battleship2 {
     }
 
     public void attack() {
+        System.out.print("Where do you want to attack?: ");
+        String attack = u.next();
 
     }
 
