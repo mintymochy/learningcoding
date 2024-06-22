@@ -57,7 +57,12 @@ class battleship2 {
     }
 
     public void placeShips() {
-
+        System.out.print("Where do you want to place your Carrier [5 spaces]");
+        String carrierplacement = u.next();
+        System.out.print("Where do you want to place your Battleship? [4 spaces]");
+        System.out.print("Where do you want to place your Cruiser? [3 spaces]");
+        System.out.print("Where do you want to place your Submarine? [3 spaces]");
+        System.out.print("Where do you want to place your Destroyer? [2 spaces]");
     }
 
     public int checkShotLetter(String shot) {
