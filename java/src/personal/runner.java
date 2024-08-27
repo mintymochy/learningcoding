@@ -1,6 +1,6 @@
 package personal;
 
-import java.util.*;
+import Unit_6_7_8.tictactoe;
 
 /*
  05-15-2024
@@ -8,5 +8,5 @@ import java.util.*;
  :3
  */
 public class runner {
-
+    tictactoe t = new tictactoe();
 }

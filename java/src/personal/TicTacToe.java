@@ -32,7 +32,7 @@ public class TicTacToe {
     }
 
     public void Drop() {
-        char player = ' ';
+        char player;
         int row = 0;
         int col = 0;
         if (turn == 0) {
@@ -42,21 +42,33 @@ public class TicTacToe {
         }
         System.out.print("Where do you want to place your " + player + " ?: ");
         String s1 = scanner.next().toUpperCase().stripTrailing();
-        char c1 = s1.charAt(0);// col
-        char c2 = s1.charAt(1);// row
-        if (c1 == 'A') {
-            col = 0;
-        } else if (c1 == 'B') {
-            col = 1;
-        } else if (c1 == 'C') {
-            col = 2;
+        char shotCol = s1.charAt(0);// col
+        char shotRow = s1.charAt(1);// row
+        switch (shotCol) {
+            case 'A':
+                col = 0;
+                break;
+            case 'B':
+                col = 1;
+                break;
+            case 'C':
+                col = 2;
+                break;
+            default:
+                break;
         }
-        if (c2 == '1') {
-            row = 0;
-        } else if (c2 == '2') {
-            row = 1;
-        } else if (c2 == '3') {
-            row = 2;
+        switch (shotRow) {
+            case '1':
+                row = 0;
+                break;
+            case '2':
+                row = 1;
+                break;
+            case '3':
+                row = 2;
+                break;
+            default:
+                break;
         }
         b[row][col] = player;
         // ending turn
@@ -68,8 +80,18 @@ public class TicTacToe {
 
     }
 
-    public void DropO() {
-
+    public boolean checkWin(char shotCol, char shotRow) {
+        if (b[shotRow + 1][shotCol] == b[shotRow][shotCol]) {
+            if (b[shotRow + 2][shotCol] == b[shotRow][shotCol]) {
+                return true;
+            }
+        }
+        if (b[shotRow][shotCol + 1] == b[shotRow][shotCol]) {
+            if (b[shotRow][shotCol + 2] == b[shotRow][shotCol]) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
