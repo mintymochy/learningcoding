@@ -85,17 +85,11 @@ public class calculator {
         System.out.print("Enter Number: ");
         c.setNumber1(ui.nextDouble());
         System.out.println("List of valid operations!");
-        for (int i = 0; i <= operators.length; i++) {
-            System.out.println(i + ". " + operators[i]);
+        for (int i = 0; i <= operators.length - 1; i++) {
+            System.out.println((i + 1) + ". " + operators[i]);
         }
         System.out.print("Enter operator: ");
-        while (temp2 == false) {
-            ui.next().toLowerCase();
-            for (int i = 0; i <= operators.length; i++) {
-                if (temp.equals(operators[i]))
-                    temp2 = true;
-            }
-        }
+        ui.next().toLowerCase();
         c.setOperator(temp);
         System.out.print("Enter Number: ");
         c.setNumber2(ui.nextDouble());

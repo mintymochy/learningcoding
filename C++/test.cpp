@@ -30,5 +30,5 @@ public:
 
 int main() {
   Clock alarm;
-  std::cout << alarm.getTime(); // Output: 1200
+  cout << alarm.getTime(); // Output: 1200
 }
